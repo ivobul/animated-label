@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  font-family: "Inter", sans-serif;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 25px;
+}
+
+main {
+  flex-basis: 607px;
+}
+
+form {
+  position: relative;
+}
+
+label {
+  font-size: 1.5rem;
+  left: 32px;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all .2s ease-in-out;
+}
+
+input {
+  border: 4px solid #CFCECE;
+  border-radius: 10px;
+  display: block;
+  font-size: 1.5rem;
+  height: 117px;
+  padding: 40px 28px 8px;
+  width: 100%;
+}
+
+input:focus {
+  border: 4px solid #0015FF;
+  outline: none;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  font-size: .875rem; 
+  top: 30px;
+  transform: translateY(0);
+}
+
+input:user-valid {
+  border: 4px solid #18D651;
+}
+
+input:user-invalid {
+  border: 4px solid #DF0C0C;
+}
+
+@media (max-width: 767px) {
+  main {
+    flex: 100%
+  }
+}
